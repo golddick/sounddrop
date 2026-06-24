@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --brand:        #cc0000;
+  --brand-dim:    #991111;
+  --brand-glow:   rgba(204, 0, 0, 0.15);
+  --accent:       #ff4444;
+  --bg:           #0d0d0d;
+  --surface:      #161616;
+  --surface-2:    #1e1e1e;
+  --border:       #2a2a2a;
+  --border-light: #383838;
+  --text:         #f0f0f0;
+  --text-dim:     #888888;
+  --text-faint:   #3a3a3a;
+  --green:        #22c55e;
+  --yellow:       #f59e0b;
+  --blue:         #3b82f6;
+  --radius:       12px;
+  --radius-sm:    8px;
+  --radius-lg:    20px;
+  --mono:         'JetBrains Mono', 'Fira Code', monospace;
+  --transition:   0.15s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100dvh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; border: none; }
+
+input, textarea, select { font-family: inherit; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

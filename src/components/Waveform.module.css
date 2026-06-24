@@ -1,0 +1,39 @@
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 44px;
+}
+
+.bar {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--brand);
+  animation: wave 1.4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+  transform-origin: center;
+}
+
+/* heights by position */
+.bar:nth-child(1)  { height: 8px; }
+.bar:nth-child(2)  { height: 16px; }
+.bar:nth-child(3)  { height: 26px; }
+.bar:nth-child(4)  { height: 36px; }
+.bar:nth-child(5)  { height: 44px; }
+.bar:nth-child(6)  { height: 36px; }
+.bar:nth-child(7)  { height: 26px; }
+.bar:nth-child(8)  { height: 16px; }
+.bar:nth-child(9)  { height: 8px; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.25); opacity: 0.3; }
+  50%       { transform: scaleY(1);   opacity: 1; }
+}
+
+.idle .bar   { animation-duration: 3s; opacity: 0.2; }
+.active .bar { animation-duration: 1s; }
+.receiving .bar {
+  background: var(--green);
+  animation-duration: 0.45s;
+}

@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.certs/
+public/quiet/quiet.js
+public/quiet/quiet.js.mem
+public/quiet/quiet-profiles.json
+.env
+.env.local
+.devREADME.MD
+.env.production
+*.log
