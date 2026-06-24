@@ -114,3 +114,33 @@
 }
 .refreshBtn:hover { color: var(--text); border-color: var(--border-light); }
 .loading { text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.9rem; }
+
+/* Network status banners */
+.networkBanner {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25);
+  border-radius: var(--radius); padding: 0.85rem 1.1rem;
+  font-size: 0.85rem; color: var(--green);
+}
+.networkDot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 6px var(--green);
+  flex-shrink: 0; animation: pulse 2s ease infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+
+.networkBannerWarn {
+  background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25);
+  border-radius: var(--radius); padding: 0.85rem 1.1rem;
+  font-size: 0.85rem; color: var(--yellow);
+}
+.networkBannerWarn a { color: var(--yellow); text-decoration: underline; }
+
+.hotspotHint {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.25rem;
+  font-size: 0.85rem; color: var(--text-dim);
+}
+.hotspotHint strong { color: var(--text); display: block; margin-bottom: 0.75rem; }
+.hotspotHint ol { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.hotspotHint a { color: var(--brand); }

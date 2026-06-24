@@ -112,3 +112,15 @@
 .emptyIcon { font-size: 3rem; }
 .emptyState p { font-size: 0.95rem; }
 .emptyState small { font-size: 0.8rem; line-height: 1.6; }
+
+.failHint {
+  font-size: 0.78rem; color: var(--yellow);
+  background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2);
+  border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.5rem;
+  text-align: center;
+}
+.dropzoneLink {
+  display: inline-block; margin-top: 0.5rem;
+  color: var(--blue); font-size: 0.85rem; font-weight: 600;
+  text-decoration: underline;
+}

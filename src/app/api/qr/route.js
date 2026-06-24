@@ -5,10 +5,13 @@ import { getLocalIP } from '@/lib/utils';
 export const runtime = 'nodejs';
 
 export async function GET() {
-  const ip   = getLocalIP();
-  const port = process.env.PORT || 3000;
-  const proto = 'https';
-  const url  = `${proto}://${ip}:${port}`;
+  const isRailway   = !!process.env.RAILWAY_ENVIRONMENT;
+  const railwayHost = process.env.RAILWAY_PUBLIC_DOMAIN || null;
+  const port        = process.env.PORT || 3000;
+
+  const url = isRailway && railwayHost
+    ? `https://${railwayHost}`
+    : `https://${getLocalIP()}:${port}`;
 
   try {
     const qr = await QRCode.toDataURL(url, {
